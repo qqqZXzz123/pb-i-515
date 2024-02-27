@@ -55,3 +55,6 @@ RUN ln -fs /usr/share/zoneinfo/US/Pacific-New /etc/localtime && \
 #RUN pip3 install requests Pillow
 RUN pip3 install --upgrade pip
 RUN pip3 install requests Pillow
+
+RUN apt-get update
+RUN apt-get install libc6
