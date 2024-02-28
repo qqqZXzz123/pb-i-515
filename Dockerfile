@@ -1,6 +1,6 @@
 #based on /tg/station byond image
 
-FROM i386/ubuntu:bionic
+FROM i386/ubuntu:22.04
 
 ENV BYOND_MAJOR=515 \
     BYOND_MINOR=1619
