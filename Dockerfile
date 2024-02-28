@@ -1,11 +1,15 @@
 #based on /tg/station byond image
 
-FROM i386/ubuntu:22.04
+FROM ubuntu:22.04
 
 ENV BYOND_MAJOR=515 \
     BYOND_MINOR=1619
 
 ARG DEBIAN_FRONTEND=noninteractive
+
+RUN dpkg --add-architecture i386 
+RUN apt-get update
+RUN apt-get install libc6:i386 libstdc++6:i386
 
 RUN apt-get update \
     && apt-get install -y \
